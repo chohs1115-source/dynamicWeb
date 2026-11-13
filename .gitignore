@@ -1,0 +1,50 @@
+# ==============================
+# Eclipse Project Settings
+# ==============================
+
+# .project, .classpath, .settings는 GitHub에 포함
+# 다른 PC에서 Eclipse 프로젝트로 Import하기 위해 유지
+
+# ==============================
+# Compiled files
+# ==============================
+
+*.class
+/bin/
+/build/
+
+# ==============================
+# Eclipse temporary files
+# ==============================
+
+.metadata/
+.recommenders/
+*.tmp
+*.bak
+*.swp
+*~
+
+# ==============================
+# OS generated files
+# ==============================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Logs
+# ==============================
+
+*.log
+
+# Eclipse Workspace
+.metadata/
+Servers/
+server/
+tmp/
+
+# Tomcat
+work/
+temp/
+logs/
