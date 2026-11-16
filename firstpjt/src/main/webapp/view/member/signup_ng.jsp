@@ -7,7 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<a href="/firstpjt/">home</a>
+	&nbsp;&nbsp; | &nbsp;&nbsp;
+	<a href="/firstpjt/signup.mem">sign-up</a>
+	&nbsp;&nbsp; | &nbsp;&nbsp;
+	<a href="/firstpjt/signin.mem">sign-in</a>
+	
+	<br><br>
 	This page is signup NG!!
 	
 </body>

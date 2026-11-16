@@ -11,8 +11,23 @@ public class MemberDao {
 		
 		memDB.put(memberDto.getMemId(), memberDto);
 		
-		return memDB.get(memberDto.getMemId()) != null ? 1 : 0;
+		return memDB.get(memberDto.getMemId()) != null ? 
+				MemberService.SIGN_UP_OK : MemberService.SIGN_UP_NG;
+	}
+
+	public MemberDto selectMemberByMemIdAndMemPw(String memId) {
 		
+		MemberDto memberDto = memDB.get(memId);
+		
+		/*
+		if (memberDto != null && memberDto.getMemPw().equals(memPw)) {
+			return memberDto;
+		} else {
+			return null;
+		}
+		*/
+		
+		return memberDto;
 	}
 	
 }
