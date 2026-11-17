@@ -1,4 +1,4 @@
-package com.office.ex;
+package com.office.ex.member;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,23 +11,20 @@ public class MemberDao {
 		
 		memDB.put(memberDto.getMemId(), memberDto);
 		
-		return memDB.get(memberDto.getMemId()) != null ? 
-				MemberService.SIGN_UP_OK : MemberService.SIGN_UP_NG;
+		return memDB.get(memberDto.getMemId()) != null 
+				? 
+				MemberService.SIGN_UP_OK
+				:
+				MemberService.SIGN_UP_NG;
+		
 	}
 
 	public MemberDto selectMemberByMemIdAndMemPw(String memId) {
 		
-		MemberDto memberDto = memDB.get(memId);
+		System.out.println("memDB.get(memId): " + memDB.get(memId));
 		
-		/*
-		if (memberDto != null && memberDto.getMemPw().equals(memPw)) {
-			return memberDto;
-		} else {
-			return null;
-		}
-		*/
+		return memDB.get(memId);
 		
-		return memberDto;
 	}
-	
+
 }
