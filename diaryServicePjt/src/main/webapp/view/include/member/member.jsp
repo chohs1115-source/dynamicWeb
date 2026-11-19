@@ -15,7 +15,7 @@
 			form.memPw.focus();
 			
 		} else {
-			from.submit();
+			form.submit();
 		}
 		
 	}    
