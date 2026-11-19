@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <jsp:include page="./view/include/title.jsp" />
 
-<link href="./res/css/index.css" rel="stylesheet" type="text/css">
+<link href="./res/css/member/signup_form.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
