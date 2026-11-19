@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <jsp:include page="../include/title.jsp" />
+
+<link href="./res/css/index.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 

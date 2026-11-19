@@ -14,3 +14,7 @@ nav div.nav_wrap a{
 	display: inline-block;
 	margin: 0 8px;
 }
+
+nav div.nav_wrap a:last-child {
+	margin-right: 15px;
+}

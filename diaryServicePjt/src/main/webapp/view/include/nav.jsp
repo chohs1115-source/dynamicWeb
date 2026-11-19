@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<link href="./res/css/include/nav.css" rel ="stylesheet" type="text/css">    
     
+<link href="./res/css/include/nav.css" rel="stylesheet" type="text/css">    
+
 <nav>
 	<div class="nav_wrap">
-		<a href="<%= request.getContextPath() %>>">HOME</a>
+		<a href="<%= request.getContextPath() %>/">HOME</a>
 		<a href="<%= request.getContextPath() %>/signup_form.mem">SIGN-UP</a>
 		<a href="<%= request.getContextPath() %>/signin_form.mem">SIGN-IN</a>
 		<a href="<%= request.getContextPath() %>/signout_confirm.mem">SIGN-OUT</a>
