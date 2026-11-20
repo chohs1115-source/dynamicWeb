@@ -45,6 +45,12 @@ public class MemberController extends HttpServlet {
 			}
 			
 			break;
+			
+		case "/signin_form.mem":
+			
+			nextPage = "view/member/signin_form.jsp";
+			
+			break;
 
 		}
 		

@@ -31,7 +31,9 @@ values('seari', '1111', 'seari@gmail.com', '010-1234-7777');
 insert into tbl_member(memId, memPw, memMail, memPhone) 
 values('seari2', '1111', 'seari@gmail.com', '010-1234-7777');
 
-set @@auto_increment_increment = 3;
+/*set @@auto_increment_increment = 3;*/
+
+SET GLOBAL auto_increment_increment = 3;
 
 drop table tbl_member;
 

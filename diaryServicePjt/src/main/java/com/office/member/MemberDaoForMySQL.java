@@ -93,9 +93,9 @@ public class MemberDaoForMySQL implements IMemberDao {
 			
 			// 5. 데이터 주입
 			pstmt.setString(1, memberDto.getMemId());
-			pstmt.setString(1, memberDto.getMemPw());
-			pstmt.setString(1, memberDto.getMemMail());
-			pstmt.setString(1, memberDto.getMemPhone());
+			pstmt.setString(2, memberDto.getMemPw());
+			pstmt.setString(3, memberDto.getMemMail());
+			pstmt.setString(4, memberDto.getMemPhone());
 			
 			// 6. 작업 지시
 			result = pstmt.executeUpdate();
