@@ -22,7 +22,7 @@
 		<div class="article_wrap">
 			
 			<h3>
-			SIGN IN FAIL!!
+			SIGN UP SUCCESS!!
 			</h3>
 			
 		</div>

@@ -47,3 +47,19 @@ drop table tbl_member;
 select count(*) cnt from tbl_member where memId = 'gildong';
 
 delete from tbl_member;
+
+
+create table tbl_diary(
+	diaryNo			int auto_increment,
+	diaryWord		varchar(100) not null,
+	memId			varchar(20)	unique not null,
+	diaryRegDate	timestamp default current_timestamp,
+	diaryModDate	timestamp default current_timestamp on update current_timestamp,
+	primary key(diaryNo)
+) auto_increment = 10001;
+
+show tables;
+desc tbl_diary;
+select * from tbl_diary;
+
+
