@@ -29,7 +29,7 @@ public class MemberController extends HttpServlet {
 		switch (command) {
 		case "/signup_form.mem":
 			
-			nextPage = "view/member/signup_form.jsp";
+			nextPage = generateView("signup_form");
 			
 			break;
 			
@@ -39,16 +39,30 @@ public class MemberController extends HttpServlet {
 			int resultForSignup = memberService.signup(request, response);
 			
 			if (resultForSignup > 0) {
-				nextPage = "view/member/signup_ok.jsp";
+				nextPage = generateView("signup_ok");
 			} else {
-				nextPage = "view/member/signup_ng.jsp";
+				nextPage = generateView("signup_ng");
 			}
 			
 			break;
 			
 		case "/signin_form.mem":
 			
-			nextPage = "view/member/signin_form.jsp";
+			nextPage = generateView("signin_form");
+			
+			break;
+			
+		case "/signin_confirm.mem":
+			
+			memberService = new MemberServiceForDW(new MemberDaoForMySQL());
+			MemberDto signinedMemberDto = memberService.signin(request, response);
+			
+			if (signinedMemberDto != null) {
+				nextPage = generateView("signin_ok");
+			} else {
+				nextPage = generateView("signin_ng");
+			}
+			
 			
 			break;
 
@@ -64,5 +78,13 @@ public class MemberController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		doGet(request, response);
 	}
+	
+	private String generateView(String viewName) {
+		
+		String view = "view/member/" + viewName + ".jsp";
+		
+		return view;
+		
+	} 
 
 }
