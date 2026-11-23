@@ -2,13 +2,22 @@ package com.office.diary;
 
 public class DiaryDto {
 
-	private int diaryNo;			
-	private String diaryWord;		
-	private String memId;
+	// only diary
+	private int diaryNo;
+	private String diaryWord;
 	private String diaryRegDate;
 	private String diaryModDate;
 	
-	public DiaryDto() {}
+	// only member
+	private int memNo;
+	private String memId;
+	private String memPw;
+	private String memMail;
+	private String memPhone;
+	private String memRegDate;
+	private String memModDate;
+	
+	public DiaryDto() { }
 
 	public DiaryDto(int diaryNo, String diaryWord, String memId, String diaryRegDate, String diaryModDate) {
 		this.diaryNo = diaryNo;
@@ -16,8 +25,8 @@ public class DiaryDto {
 		this.memId = memId;
 		this.diaryRegDate = diaryRegDate;
 		this.diaryModDate = diaryModDate;
-	}
-
+	}	
+	
 	public DiaryDto(String diaryWord, String memId) {
 		this.diaryWord = diaryWord;
 		this.memId = memId;
@@ -62,7 +71,53 @@ public class DiaryDto {
 	public void setDiaryModDate(String diaryModDate) {
 		this.diaryModDate = diaryModDate;
 	}
-	
-	
-	
+
+	public int getMemNo() {
+		return memNo;
+	}
+
+	public void setMemNo(int memNo) {
+		this.memNo = memNo;
+	}
+
+	public String getMemPw() {
+		return memPw;
+	}
+
+	public void setMemPw(String memPw) {
+		this.memPw = memPw;
+	}
+
+	public String getMemMail() {
+		return memMail;
+	}
+
+	public void setMemMail(String memMail) {
+		this.memMail = memMail;
+	}
+
+	public String getMemPhone() {
+		return memPhone;
+	}
+
+	public void setMemPhone(String memPhone) {
+		this.memPhone = memPhone;
+	}
+
+	public String getMemRegDate() {
+		return memRegDate;
+	}
+
+	public void setMemRegDate(String memRegDate) {
+		this.memRegDate = memRegDate;
+	}
+
+	public String getMemModDate() {
+		return memModDate;
+	}
+
+	public void setMemModDate(String memModDate) {
+		this.memModDate = memModDate;
+	}	
+
 }
