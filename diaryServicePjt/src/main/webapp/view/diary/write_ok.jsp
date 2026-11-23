@@ -8,7 +8,6 @@
 
 <link href="./res/css/member/signup_form.css" rel="stylesheet" type="text/css">
 
-<%-- <script type="text/javascript" src=" ${pageContext.request.contextPath}/res/js/member/signup_form.js"></script> 주석 처리 --%>
 <jsp:include page="../include/diary/diary.jsp" />
 
 </head>
@@ -21,10 +20,10 @@
 	<article>
 		<div class="article_wrap">
 			
-				<h3>
-					DIARY WRITE SUCCESS!!
-				</h3>
-				
+			<h3>
+				DIARY WRITE SUCCESS!!
+			</h3>
+			
 		</div>
 	</article>
 	

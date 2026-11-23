@@ -63,6 +63,7 @@ alter table tbl_diary drop index memId;
 show tables;
 desc tbl_diary;
 select * from tbl_diary;
+delete from tbl_diary;
 
 -- table join
 select * from tbl_diary td

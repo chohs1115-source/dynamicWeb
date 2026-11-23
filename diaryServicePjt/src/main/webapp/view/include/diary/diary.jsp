@@ -4,16 +4,15 @@
 	const writeForm = () => {
 		console.log("writeForm()");
 		
-		let form = document.wirte_form;
+		let form = document.write_form;
 		if (form.diaryWord.value === '') {
 			alert("Please input diary!!");
 			form.diaryWord.focus();
 			
 		} else {
 			form.submit();
+			
 		}
+		
 	}
-
-
-
 </script>
