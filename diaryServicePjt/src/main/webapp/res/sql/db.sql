@@ -170,9 +170,20 @@ create table tbl_flu_vaccin_person(
 select * from tbl_flu_vaccin_person;
 desc tbl_flu_vaccin_person;
 
+-- 관리자 멤버 테이블 --------
+create table tbl_admin(
+	admin_no		INT		auto_increment,
+	admin_id		varchar(20) unique not null,
+	admin_pw		varchar(20) not null,
+	admin_mail		varchar(50) not null,
+	admin_phone     varchar(30) not null,
+	admin_reg_date	timestamp default current_timestamp,
+	admin_mod_date	timestamp default current_timestamp on update current_timestamp,
+	primary key(admin_no)
+);
 
-
-
+select * from tbl_admin;
+desc tbl_admin;
 
 
 
