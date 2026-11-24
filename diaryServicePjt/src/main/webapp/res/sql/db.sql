@@ -69,6 +69,6 @@ delete from tbl_diary;
 select * from tbl_diary td
 join tbl_member tm
 on td.memId = tm.memId
-where td.memId = 'chanho';
+where td.memId = 'gildong';
 
 

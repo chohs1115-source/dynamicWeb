@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="com.office.diary.DiaryDto"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -41,6 +42,25 @@
 					</tr>
 				</thead>
 				<tbody>
+				
+					<c:forEach var="item" items="${myDiaries}">
+						<tr>
+							<td>${item.diaryNo}</td>
+							<td>${item.DiaryWord}</td>
+							<td>${item.DiaryRegDate}</td>
+							<td>${item.DiaryModDate}</td>
+							<td>${item.MemNo}</td>
+							<td>${item.MemId}</td>
+							<td>${item.MemPw}</td>
+							<td>${item.MemMail}</td>
+							<td>${item.MemPhone}</td>
+							<td>${item.MemRegDate}</td>
+							<td>${item.MemModDate}</td>
+						</tr>
+					</c:forEach>
+				
+				
+				
 				<%
 					List<DiaryDto> myDiaries = (List<DiaryDto>) request.getAttribute("myDiaries");
 					for (int i = 0; i < myDiaries.size(); i++) {
