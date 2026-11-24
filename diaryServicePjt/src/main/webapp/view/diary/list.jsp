@@ -59,9 +59,7 @@
 						</tr>
 					</c:forEach>
 				
-				
-				
-				<%
+				<%-- <%
 					List<DiaryDto> myDiaries = (List<DiaryDto>) request.getAttribute("myDiaries");
 					for (int i = 0; i < myDiaries.size(); i++) {
 				%>
@@ -80,7 +78,7 @@
 					</tr>
 				<%	
 					}
-				%>
+				%> --%>
 					
 				</tbody>
 			</table>
