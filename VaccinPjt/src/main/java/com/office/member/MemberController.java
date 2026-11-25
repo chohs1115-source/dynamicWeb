@@ -35,6 +35,15 @@ public class MemberController extends HttpServlet {
 			
 		case "/signup_confirm.mem":		// 회원가입 확인
 			
+			memberService = new MemberService(new MemberDao()); //제어의 역전, IOC
+			int resultForSignupConfirm = memberService.signupConfirm(request, response);
+			
+			if(resultForSignupConfirm > 0) {
+				nextPage = generateView("signup_ok");
+			} else {
+				nextPage = generateView("signup_ng");
+			}
+			
 			break;
 
 		}

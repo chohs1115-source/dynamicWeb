@@ -23,7 +23,7 @@
 			form.admin_pw_again.value = '';
 			form.admin_pw.focus();
 			
-		} else if (form.admin_mail.value === ''){
+		} else if (form.admin_mail.value === '') {
 			alert('Input new admin MAIL!!');
 			form.admin_mail.focus();
 			
@@ -33,10 +33,8 @@
 			
 		} else {
 			form.submit();
+			
 		}
 		
-		
-		
-		
-	}
+	} 
 </script>

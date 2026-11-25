@@ -6,15 +6,15 @@
 <meta charset="UTF-8">
 <jsp:include page="./view/include/title.jsp" />
 
-<link href="./res/css/index.jsp" rel="stylesheet">
+<link href="./res/css/index.css" rel="stylesheet">
 
 </head>
 <body>
-	
+
 	<jsp:include page="./view/include/header.jsp" />
-
+	
 	<jsp:include page="./view/include/nav.jsp" />
-
+	
 	<section>
 		<div class="section_wrap">
 			<h1>
@@ -22,7 +22,7 @@
 			</h1>
 		</div>
 	</section>
-
+	
 	<jsp:include page="./view/include/footer.jsp" />
 
 </body>
