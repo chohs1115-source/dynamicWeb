@@ -1,5 +1,6 @@
 package com.office.member;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,15 +11,37 @@ import java.io.IOException;
 @WebServlet("*.mem")
 public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-  
+
     public MemberController() {
+        super();
     }
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		String requestURI = request.getRequestURI();
+		String contextPath = request.getContextPath();
+		String command = requestURI.substring(contextPath.length());
+		
+		MemberService memberService = null;
+		String nextPage = null;
+		
+		switch (command) {
+		case "/signup_form.mem":		// 회원가입 양식
+			
+			nextPage = generateView("signup_form");
+			
+			break;
+			
+		case "/signup_confirm.mem":		// 회원가입 확인
+			
+			break;
+
+		}
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher(nextPage);
+		dispatcher.forward(request, response);
+		
 	}
 
 
@@ -27,4 +50,9 @@ public class MemberController extends HttpServlet {
 		doGet(request, response);
 	}
 
+	private String generateView(String viewName) {
+		return "view/member/" + viewName + ".jsp";
+		
+	}
+	
 }
