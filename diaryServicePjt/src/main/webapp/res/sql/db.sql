@@ -163,12 +163,13 @@ create table tbl_flu_vaccin_person(
 	fvp_phone		varchar(30)		not null comment '접종자 연락처',
 	fv_location_no		INT				not null comment '접종자 번호',
 	fv_type			varchar(1)		not null comment '백신 타입',
-	fvp_reg_date	timestamp		not null comment '등록일',
+	fvp_reg_date	timestamp	default current_timestamp	not null comment '등록일',
 	primary key(fvp_no)
 );
 
 select * from tbl_flu_vaccin_person;
 desc tbl_flu_vaccin_person;
+drop table tbl_fv_vaccin_person;
 
 -- 관리자 멤버 테이블 --------
 create table tbl_admin(
@@ -185,7 +186,14 @@ create table tbl_admin(
 select * from tbl_admin;
 desc tbl_admin;
 
-
+select * from tbl_flu_vaccin_person fvp
+join tbl_social_number sn
+on fvp.ss_number = sn.ss_number
+join tbl_fv_location fl
+on fvp.fv_location_no = fl.fv_location_no
+join tbl_fv_type ft
+on fvp.fv_type = ft.fv_type
+order by fvp.fvp_no asc;
 
 
 

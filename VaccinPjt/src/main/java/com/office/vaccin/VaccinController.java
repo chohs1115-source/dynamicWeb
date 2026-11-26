@@ -12,11 +12,10 @@ import java.io.IOException;
 public class VaccinController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-
     public VaccinController() {
+        super();
     }
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String requestURI = request.getRequestURI();
@@ -49,13 +48,13 @@ public class VaccinController extends HttpServlet {
 		
 	}
 
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		doGet(request, response);
 	}
 	
 	private String generateView(String viewName) {
 		return "view/vaccin/" + viewName + ".jsp";
-		
 	}
 
 }

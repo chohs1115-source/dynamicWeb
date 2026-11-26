@@ -1,7 +1,7 @@
 package com.office.vaccin;
 
 public class VaccinDto {
-	
+
 	private int fvp_no;
 	private String fvp_name;
 	private String ss_number;
@@ -11,7 +11,7 @@ public class VaccinDto {
 	private String fv_type;
 	private String fvp_reg_date;
 	
-	public VaccinDto() {}
+	public VaccinDto() { }
 
 	public VaccinDto(int fvp_no, String fvp_name, String ss_number, String fvp_mail, String fvp_phone,
 			int fv_location_no, String fv_type, String fvp_reg_date) {
@@ -99,7 +99,4 @@ public class VaccinDto {
 		this.fvp_reg_date = fvp_reg_date;
 	}
 	
-	
-	
-
 }
