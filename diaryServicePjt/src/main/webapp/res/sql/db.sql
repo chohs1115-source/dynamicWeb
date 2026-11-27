@@ -196,8 +196,20 @@ on fvp.fv_type = ft.fv_type
 order by fvp.fvp_no asc;
 
 
+-- db_temp ---
+create database db_temp;
+show databases;
 
+create user if not exists 'root'@'192.168.1.59'
+identified by '1234';
 
+create user if not exists 'root'@'192.168.1.131'
+identified by '1234';
+
+select user, host, authentication_string from mysql.user where user='root';
+
+grant all privileges on *.* to 'root'@'192.168.1.59' with grant option;
+grant all privileges on *.* to 'root'@'192.168.1.131' with grant option;
 
 
 
