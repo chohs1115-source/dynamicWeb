@@ -17,6 +17,7 @@ create table tbl_member(
 
 show tables;
 desc tbl_member;
+DELETE FROM tbl_member;
 select * from tbl_member;
 
 insert into tbl_member(memId, memPw, memMail, memPhone) 
