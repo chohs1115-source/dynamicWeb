@@ -157,4 +157,63 @@ public class VaccinDao implements DatabaseInfo {
 		
 	}
 
+	public VaccinDto selectVaccinDtoByFvpNo(int no) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		List<VaccinDto> vaccinDtos = new ArrayList<VaccinDto>();
+		
+		try {
+			
+			Class.forName(DRIVER);
+			
+			conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+			
+			String sql =  "select * from tbl_flu_vaccin_person where fvp_no =?";
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, no);
+			
+			rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				
+				int fvp_no = rs.getInt("fvp_no");
+				String fvp_name = rs.getString("fvp_name");
+				String ss_number = rs.getString("ss_nember");
+				String fvp_mail = rs.getString("fvp_mail");
+				String fvp_phone = rs.getString("fvp_phone");
+				String fv_location_no = rs.getString("fv_location_no");
+				String fv_type = rs.getString("fv_type");
+				String fvp_reg_date = rs.getString("fvp_reg_date");
+				
+				VaccinDto dto = new VaccinDto(fvp_no, fvp_name, ss_number, fvp_mail, fvp_phone, no, fv_type, fvp_reg_date);
+						
+				vaccinDtos.add(dto);
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			
+			try {
+				
+				if (rs != null) rs.close();
+				if (pstmt != null) pstmt.close();
+				if (conn != null) conn.close();
+				
+			} catch (Exception e2) {
+				e2.printStackTrace();
+				
+			}
+			
+		}
+		
+		return vaccinDtos.get(0);
+	}
+
 }
